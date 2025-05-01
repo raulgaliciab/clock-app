@@ -1,3 +1,4 @@
+import { ExpandedInfo } from './components/ExpandedInfo';
 import { RandomQuotes } from './components/RandomQuotes';
 import { Time } from './components/Time';
 
@@ -8,6 +9,8 @@ function ClockApp() {
       <RandomQuotes/>
 
       <Time/>
+
+      <ExpandedInfo/>
     </>
   )
 }
