@@ -1,7 +1,11 @@
+import { RandomQuotes } from './components/RandomQuotes';
+
 function ClockApp() {
 
   return (
-    <h1>ClockApp</h1>
+    <>
+      <RandomQuotes/>
+    </>
   )
 }
 
