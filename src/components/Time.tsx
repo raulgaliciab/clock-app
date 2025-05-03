@@ -24,7 +24,7 @@ export const Time = () => {
 
       <ButtonExpansion isExpanded={isExpanded} onToggle={toggleExpanded}/>
 
-      { isExpanded && <ExpandedInfo/>}
+      { isExpanded && <ExpandedInfo timeData={timeData}/>}
     </section>
   )
 }
