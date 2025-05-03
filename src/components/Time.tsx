@@ -1,37 +1,10 @@
-import { useEffect, useState } from 'react';
-import { getTimeAPI } from '../utils/getTime';
-import { TimeApiResponse } from '../types/TimeApiResponse';
 import { ButtonExpansion } from './ButtonExpansion';
 import { ExpandedInfo } from './ExpandedInfo';
+import { useTime } from '../hooks/useTime';
 
 export const Time = () => {
 
-  const [ timeData, setTimeData ] = useState<TimeApiResponse | null >(null);
-  const [ currentTime, setCurrentTime ] = useState<Date | null>(null);
-
-  // Get time API
-  useEffect( () => {
-    getTimeAPI()
-      .then( data => {
-        setTimeData(data)
-        setCurrentTime(new Date(data.datetime));
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-  }, []);
-
-  // Starts internal clock
-  useEffect( () => {
-    if(!currentTime) return;
-
-    const interval = setInterval(() => {
-      setCurrentTime(prev => prev ? new Date(prev.getTime() + 60_000) : null);
-    }, 60_000);
-
-    return () => clearInterval(interval)
-  }, [currentTime]);
+  const { currentTime, timeData } = useTime();
 
   const formattedTime = currentTime
     ? `${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}`
