@@ -3,6 +3,7 @@ import { ExpandedInfo } from './ExpandedInfo';
 import { useTime } from '../hooks/useTime';
 import { useState } from 'react';
 import { formatTime } from '../utils/formatTime';
+import { getGreeting } from '../utils/getGreeting';
 
 export const Time = () => {
 
@@ -10,6 +11,7 @@ export const Time = () => {
   const [ isExpanded, setIsExpanded ] = useState(false);
 
   const formattedTime = formatTime(currentTime);
+  const greeting = getGreeting(currentTime);
 
   const toggleExpanded = () => setIsExpanded(prev => !prev);
 
@@ -17,7 +19,7 @@ export const Time = () => {
     <section>
       <span>
         <img src="/assets/desktop/icon-sun.svg" alt="Sun Icon" />
-        GOOD MORNING, IT'S CURRENTLY
+        GOOD {greeting}, IT'S CURRENTLY
       </span>
       <p>{formattedTime} <span>{timeData?.abbreviation ?? ''}</span></p>
       <span>IN LONDON, UK</span>
