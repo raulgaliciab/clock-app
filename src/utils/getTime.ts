@@ -1,7 +1,7 @@
 import { TimeApiResponse } from '../types/TimeApiResponse';
 
 export const getTimeAPI = async () :Promise<TimeApiResponse> => {
-  const API_URL:string = 'http://worldtimeapi.org/api/ip';
+  const API_URL:string = 'https://worldtimeapi.org/api/ip';
 
     try {
       const apiRes:Response = await fetch(API_URL);
