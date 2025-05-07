@@ -1,10 +1,18 @@
-import { ButtonExpansionProps } from "../types/ButtonExpansionProps"
+import { ButtonExpansionProps } from '../types/ButtonExpansionProps';
+import { ArrowIcon } from './ArrowIcon';
 
 export const ButtonExpansion = ({ isExpanded, onToggle }: ButtonExpansionProps ) => {
   return (
-    <button onClick={onToggle}>
+    <button
+      className="button-expanded"
+      type="button"
+      onClick={onToggle}
+      aria-expanded={isExpanded}
+    >
       { isExpanded ? 'LESS' : 'MORE'}
-      <img src="/assets/desktop/icon-arrow-down.svg" alt="Expand button" />
+      <span className="icon-wrapper">
+        <ArrowIcon direction={isExpanded ? 'down' : 'up'} />
+      </span>
     </button>
   )
 }

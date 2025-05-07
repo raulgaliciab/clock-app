@@ -1,0 +1,28 @@
+@use '../abstracts/variables';
+
+.button-expanded {
+  display: flex;
+  width: 11.5rem;
+  height: 3.9rem;
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 3.75px;
+  color: rgba(variables.$secondary-black, 0.5);
+  background-color: variables.$primary-white;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+
+  .icon-wrapper {
+    display: flex;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$secondary-black;
+    border-radius: 50%;
+  }
+}
