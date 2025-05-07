@@ -4,6 +4,7 @@ import { useTime } from '../hooks/useTime';
 import { useState } from 'react';
 import { formatTime } from '../utils/formatTime';
 import { getGreeting } from '../utils/getGreeting';
+import { RandomQuotes } from './RandomQuotes';
 
 export const Time = () => {
 
@@ -16,13 +17,19 @@ export const Time = () => {
   const toggleExpanded = () => setIsExpanded(prev => !prev);
 
   return (
-    <section>
-      <span>
+    <section className='time'>
+
+      { !isExpanded && <RandomQuotes/>}
+
+      <span className='greeting'>
         <img src="/assets/desktop/icon-sun.svg" alt="Sun Icon" />
-        GOOD {greeting}, IT'S CURRENTLY
+        GOOD {greeting}
       </span>
-      <p>{formattedTime} <span>{timeData?.abbreviation ?? ''}</span></p>
-      <span>IN LONDON, UK</span>
+      <div className='main-hour'>
+        <p>{formattedTime}</p>
+        <span>{timeData?.abbreviation ?? ''}</span>
+      </div>
+      <span className='location'>IN LONDON, UK</span>
 
       <ButtonExpansion isExpanded={isExpanded} onToggle={toggleExpanded}/>
 

@@ -1,0 +1,41 @@
+@use '../abstracts/variables';
+
+.time {
+  min-height: 41.1rem;
+  padding: 2rem;
+  color: variables.$primary-white;
+  background-image: url('/public/assets/mobile/bg-image-nighttime.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .greeting {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .main-hour {
+    display: flex;
+    align-items: self-end;
+    font-size: 10rem;
+    font-weight: bold;
+
+    span {
+      padding-bottom: 1.8rem;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+  }
+
+  .location {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+}
