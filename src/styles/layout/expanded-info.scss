@@ -1,0 +1,28 @@
+@use '../abstracts/variables';
+
+.expanded-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 25.6rem;
+  margin: 0 -2rem;
+  padding: 4.8rem 2rem;
+  background-color: rgba(variables.$primary-black, 0.95);
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    .label {
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .info {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
