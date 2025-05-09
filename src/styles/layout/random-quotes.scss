@@ -1,0 +1,23 @@
+@use '../abstracts/variables';
+
+.random-quotes {
+  display: flex;
+  font-size: 1.2rem;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+
+    cite {
+      font-weight: bold;
+    }
+  }
+
+  button {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+  }
+}

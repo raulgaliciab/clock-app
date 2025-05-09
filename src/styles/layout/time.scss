@@ -1,8 +1,9 @@
 @use '../abstracts/variables';
 
 .time {
+  height: 100vh;
   min-height: 41.1rem;
-  padding: 2rem;
+  padding: 2.6rem;
   color: variables.$primary-white;
   background-image: url('/public/assets/mobile/bg-image-nighttime.jpg');
   background-size: cover;
