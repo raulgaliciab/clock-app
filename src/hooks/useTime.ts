@@ -4,7 +4,7 @@ import { getTimeAPI } from '../utils/getTime';
 
 export const useTime = () => {
 
-const [ timeData, setTimeData ] = useState<TimeApiResponse | null >(null);
+  const [ timeData, setTimeData ] = useState<TimeApiResponse | null >(null);
   const [ currentTime, setCurrentTime ] = useState<Date | null>(null);
 
   // Get time API

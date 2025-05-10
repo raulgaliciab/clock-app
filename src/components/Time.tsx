@@ -5,10 +5,12 @@ import { useState } from 'react';
 import { formatTime } from '../utils/formatTime';
 import { getGreeting } from '../utils/getGreeting';
 import { RandomQuotes } from './RandomQuotes';
+import { useRandomQuote } from '../hooks/useRandomQuote';
 
 export const Time = () => {
 
   const { currentTime, timeData } = useTime();
+  const { quote, fetchQuote } = useRandomQuote();
   const [ isExpanded, setIsExpanded ] = useState(false);
 
   const formattedTime = formatTime(currentTime);
@@ -19,7 +21,7 @@ export const Time = () => {
   return (
     <section className='time'>
 
-      { !isExpanded && <RandomQuotes/>}
+      { !isExpanded && <RandomQuotes quote={quote} onFetch={fetchQuote}/>}
 
       <span className='greeting'>
         <img src="/assets/desktop/icon-sun.svg" alt="Sun Icon" />

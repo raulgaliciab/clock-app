@@ -1,12 +1,16 @@
-export const RandomQuotes = () => {
+import { RandomQuotesProps } from "../types/RandomQuoteProps"
+
+export const RandomQuotes = ({ quote, onFetch }: RandomQuotesProps) => {
   return (
     <section className="random-quotes">
       <p>
-        <q>The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.</q>
-        <cite>John Doe</cite>
+        <q>{ quote?.quote ?? "Loading quote..." }</q>
+        <cite>{ quote?.author ?? "" }</cite>
       </p>
       <button
         type="button"
+        onClick={ onFetch }
+        aria-label="Refresh quote"
       >
         <img
           src="/assets/desktop/icon-refresh.svg"
