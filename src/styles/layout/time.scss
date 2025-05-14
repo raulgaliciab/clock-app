@@ -13,41 +13,49 @@
 }
 
 .time {
-  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto;
+  height: 100dvh;
   min-height: 41.1rem;
   padding: 2.6rem;
+  padding-bottom: 0;
   color: variables.$primary-white;
   background-size: cover;
   background-repeat: no-repeat;
 
-  .greeting {
-    display: flex;
-    height: 2.5rem;
-    align-items: center;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
+  .clock {
+    align-self: center;
 
-    img {
-      margin-right: 10px;
-    }
-  }
-
-  .main-hour {
-    display: flex;
-    align-items: self-end;
-    font-size: 10rem;
-    font-weight: bold;
-
-    span {
-      padding-bottom: 1.8rem;
+    .greeting {
+      display: flex;
+      height: 2.5rem;
+      align-items: center;
       font-size: 1.5rem;
-      font-weight: normal;
+      letter-spacing: 3px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    .main-hour {
+      display: flex;
+      align-items: self-end;
+      font-size: 10rem;
+      font-weight: bold;
+
+      span {
+        padding-bottom: 1.8rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+
+    .location {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
     }
   }
 
-  .location {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 3px;
-  }
 }

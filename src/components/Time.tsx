@@ -26,20 +26,23 @@ export const Time = () => {
 
       { !isExpanded && <RandomQuotes quote={quote} onFetch={fetchQuote}/>}
 
-      <span className='greeting'>
-        <img
-          src={`/assets/desktop/icon-${ themeMode }.svg`}
-          alt="Day Icon"
-        />
-        GOOD { greeting.toUpperCase() }
-      </span>
-      <div className='main-hour'>
-        <p>{ formattedTime }</p>
-        <span>{ timeData?.abbreviation ?? '' }</span>
-      </div>
-      <span className='location'>IN { `${location?.city.toUpperCase()}, ${location?.country}` }</span>
+      <section className='clock'>
+        <span className='greeting'>
+          <img
+            src={`/assets/desktop/icon-${ themeMode }.svg`}
+            alt="Day Icon"
+          />
+          GOOD { greeting.toUpperCase() }
+        </span>
+        <div className='main-hour'>
+          <p>{ formattedTime }</p>
+          <span>{ timeData?.abbreviation ?? '' }</span>
+        </div>
+        <span className='location'>IN { `${location?.city.toUpperCase()}, ${location?.country}` }</span>
 
       <ButtonExpansion isExpanded={ isExpanded } onToggle={ toggleExpanded }/>
+      </section>
+
 
       { isExpanded && <ExpandedInfo timeData={ timeData }/>}
     </section>
