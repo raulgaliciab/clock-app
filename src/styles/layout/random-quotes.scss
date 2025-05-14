@@ -22,3 +22,15 @@
     cursor: pointer;
   }
 }
+
+/* Tablet media queries */
+
+@media (min-width: 712px) {
+  .random-quotes {
+    font-size: 1.8rem;
+
+    button {
+      margin-left: 1.6rem;
+    }
+  }
+}

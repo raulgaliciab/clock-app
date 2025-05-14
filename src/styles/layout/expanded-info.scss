@@ -6,7 +6,7 @@
   justify-content: center;
   min-height: 25.6rem;
   margin: 0 -2.6rem;
-  padding: 4.8rem 2rem;
+  padding: 4.8rem 2.6rem;
   background-color: rgba(variables.$primary-black, 0.95);
 
   .info-container {
@@ -23,6 +23,29 @@
     .info {
       font-size: 2rem;
       font-weight: bold;
+    }
+  }
+}
+
+/* Tablet media queries */
+
+@media (min-width: 712px) {
+  .expanded-info {
+    margin: 0 -6.4rem;
+    padding: 0 6.4rem;
+
+    .info-container {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 2.4rem;
+
+      .label {
+        font-size: 1.3rem;
+      }
+
+      .info {
+        font-size: 4rem;
+      }
     }
   }
 }

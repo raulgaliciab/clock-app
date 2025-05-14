@@ -17,8 +17,7 @@
   grid-template-rows: auto auto;
   height: 100dvh;
   min-height: 41.1rem;
-  padding: 2.6rem;
-  padding-bottom: 0;
+  padding: 2.6rem 2.6rem 0 2.6rem;
   color: variables.$primary-white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -57,5 +56,43 @@
       letter-spacing: 3px;
     }
   }
+}
 
+/* Tablet media queries */
+
+@media (min-width: 712px) {
+  .sun {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5)),
+        url('/assets/tablet/bg-image-daytime.jpg');
+  }
+
+  .moon {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5)),
+      url('/assets/tablet/bg-image-nighttime.jpg');
+  }
+
+  .time {
+    padding: 6.4rem 6.4rem 0 6.4rem;
+
+    .clock {
+      .greeting {
+        font-size: 1.8rem;
+      }
+
+      .main-hour {
+        font-size: 17.5rem;
+
+        span {
+          padding-bottom: 3.8rem;
+          font-size: 3.2rem;
+        }
+      }
+
+      .location {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
