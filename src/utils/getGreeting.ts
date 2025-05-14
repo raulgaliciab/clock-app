@@ -5,10 +5,10 @@ export const getGreeting = (currentTime:Date | null):string => {
   const hour:number = currentTime.getHours();
 
   if (hour >= 5 && hour <= 12) {
-    return 'MORNING';
+    return 'morning';
   } else if (hour > 12 && hour < 18) {
-    return 'AFTERNOON';
+    return 'afternoon';
   } else {
-    return 'EVENING';
+    return 'evening';
   }
 }

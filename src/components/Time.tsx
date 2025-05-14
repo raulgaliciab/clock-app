@@ -17,27 +17,31 @@ export const Time = () => {
 
   const formattedTime = formatTime(currentTime);
   const greeting = getGreeting(currentTime);
+  const themeMode = (greeting === 'morning') ? 'sun' : 'moon';
 
   const toggleExpanded = () => setIsExpanded(prev => !prev);
 
   return (
-    <section className='time'>
+    <section className={`time ${ themeMode }`}>
 
       { !isExpanded && <RandomQuotes quote={quote} onFetch={fetchQuote}/>}
 
       <span className='greeting'>
-        <img src="/assets/desktop/icon-sun.svg" alt="Sun Icon" />
-        GOOD {greeting}
+        <img
+          src={`/assets/desktop/icon-${ themeMode }.svg`}
+          alt="Day Icon"
+        />
+        GOOD { greeting.toUpperCase() }
       </span>
       <div className='main-hour'>
-        <p>{formattedTime}</p>
-        <span>{timeData?.abbreviation ?? ''}</span>
+        <p>{ formattedTime }</p>
+        <span>{ timeData?.abbreviation ?? '' }</span>
       </div>
-      <span className='location'>IN { `${location?.city.toUpperCase()}, ${location?.country}`}</span>
+      <span className='location'>IN { `${location?.city.toUpperCase()}, ${location?.country}` }</span>
 
-      <ButtonExpansion isExpanded={isExpanded} onToggle={toggleExpanded}/>
+      <ButtonExpansion isExpanded={ isExpanded } onToggle={ toggleExpanded }/>
 
-      { isExpanded && <ExpandedInfo timeData={timeData}/>}
+      { isExpanded && <ExpandedInfo timeData={ timeData }/>}
     </section>
   )
 }
