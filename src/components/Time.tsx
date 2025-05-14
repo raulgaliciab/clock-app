@@ -6,10 +6,12 @@ import { formatTime } from '../utils/formatTime';
 import { getGreeting } from '../utils/getGreeting';
 import { RandomQuotes } from './RandomQuotes';
 import { useRandomQuote } from '../hooks/useRandomQuote';
+import { useLocation } from '../hooks/useLocation';
 
 export const Time = () => {
 
   const { currentTime, timeData } = useTime();
+  const { location } = useLocation();
   const { quote, fetchQuote } = useRandomQuote();
   const [ isExpanded, setIsExpanded ] = useState(false);
 
@@ -31,7 +33,7 @@ export const Time = () => {
         <p>{formattedTime}</p>
         <span>{timeData?.abbreviation ?? ''}</span>
       </div>
-      <span className='location'>IN LONDON, UK</span>
+      <span className='location'>IN { `${location?.city.toUpperCase()}, ${location?.country}`}</span>
 
       <ButtonExpansion isExpanded={isExpanded} onToggle={toggleExpanded}/>
 
