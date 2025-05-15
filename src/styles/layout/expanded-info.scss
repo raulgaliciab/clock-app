@@ -49,3 +49,29 @@
     }
   }
 }
+
+/* Desktop media queries */
+
+@media (min-width: 1020px) {
+  .expanded-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -16.5rem;
+    padding: 7.4rem 0 7.4rem 16.5rem;
+
+    .info-container {
+      width: 50%;
+      margin: 0 0 4.2rem 0;
+      justify-content: center;
+
+      .label {
+        margin-bottom: 0.9rem;
+        font-size: 1.5rem;
+      }
+
+      .info {
+        font-size: 5.6rem;
+      }
+    }
+  }
+}

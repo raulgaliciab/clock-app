@@ -17,7 +17,7 @@ export const Time = () => {
 
   const formattedTime = formatTime(currentTime);
   const greeting = getGreeting(currentTime);
-  const themeMode = (greeting === 'morning') ? 'sun' : 'moon';
+  const themeMode = (greeting === 'morning' || greeting === 'afternoon') ? 'sun' : 'moon';
 
   const toggleExpanded = () => setIsExpanded(prev => !prev);
 

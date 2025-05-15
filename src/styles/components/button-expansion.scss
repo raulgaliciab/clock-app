@@ -45,3 +45,14 @@
     }
   }
 }
+
+/* Desktop media queries */
+
+@media (min-width: 1020px) {
+  .button-expanded {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+}

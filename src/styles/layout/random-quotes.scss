@@ -17,6 +17,7 @@
   button {
     width: 2rem;
     height: 2rem;
+    margin-left: 1.6rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -29,8 +30,8 @@
   .random-quotes {
     font-size: 1.8rem;
 
-    button {
-      margin-left: 1.6rem;
+    q {
+      margin-bottom: 1.3rem;
     }
   }
 }

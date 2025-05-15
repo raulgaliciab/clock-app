@@ -96,3 +96,43 @@
     }
   }
 }
+
+/* Desktop media queries */
+
+@media (min-width: 1020px) {
+  .sun {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5)),
+        url('/assets/desktop/bg-image-daytime.jpg');
+    }
+
+  .moon {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5)),
+      url('/assets/desktop/bg-image-nighttime.jpg');
+  }
+  .time {
+    padding: 5.6rem 16.5rem 0 16.5rem;
+
+    .clock {
+      position: relative;
+      margin-bottom: 5.6rem;
+
+      .greeting {
+        font-size: 2rem;
+      }
+
+      .main-hour {
+        font-size: 20rem;
+
+        span {
+          font-size: 4rem;
+        }
+      }
+
+      .location {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
