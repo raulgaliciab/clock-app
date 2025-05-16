@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/get-quote.ts": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/get-quote",
+      "dest": "/api/get-quote.ts"
+    }
+  ]
+}
