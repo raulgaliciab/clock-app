@@ -1,14 +1,8 @@
 import { RandomQuotesApiResponse } from '../types/RandomQuoteApiResponse';
 
 export const getRandomQuote = async () :Promise<RandomQuotesApiResponse> => {
-  const API_URL:string = import.meta.env.VITE_QUOTES_URL;
-  const API_KEY:string = import.meta.env.VITE_QUOTES_API_KEY;
 
-  const apiRes:Response = await fetch(API_URL, {
-    headers: {
-      "X-Api-Key": API_KEY
-    },
-  });
+  const apiRes:Response = await fetch('/api/get-quote.ts');
 
   if (!apiRes.ok) {
     throw new Error(`Error fetching quote: ${apiRes.status}`)
