@@ -11,7 +11,7 @@ export const getRandomQuote = async () :Promise<RandomQuotesApiResponse> => {
   const data = await apiRes.json();
 
   return {
-    "author": data[0].author,
-    "quote": data[0].quote
+    "author": data.author,
+    "quote": data.quote
   };
 }
